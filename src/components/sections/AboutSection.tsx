@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -7,23 +7,27 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <Image
-              src="https://images.unsplash.com/photo-1529472119196-cb724127a98e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="Rachel with pets"
+              src="/Infographic2.PNG"
+              alt="Blue Ginger Pet Sitting Infographic"
               width={600}
               height={400}
               className="rounded-xl shadow-lg w-full"
             />
           </div>
           <div>
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">Meet Rachel</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">
+              Meet Rachel
+            </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Hi, I&apos;m Rachel. I have a certificate in dog behaviour, 5 years of experience, and excellent references. 
-              I absolutely love animals and have been pet sitting in Ballito for 4 years.
+              Hi, I&apos;m Rachel. I have a certificate in dog behaviour, 5
+              years of experience, and excellent references. I absolutely love
+              animals and have been pet sitting in Ballito for 4 years.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              When I&apos;m not caring for others&apos; pets, I spend my free time working with rescues! 
-              I&apos;m involved in rescue work with deep commitment to animal rescue – from township outreaches 
-              to dog walking and adoption days, sharing on social media.
+              When I&apos;m not caring for others&apos; pets, I spend my free
+              time working with rescues! I&apos;m involved in rescue work with
+              deep commitment to animal rescue – from township outreaches to dog
+              walking and adoption days, sharing on social media.
             </p>
             <div className="flex flex-wrap gap-4">
               <span className="bg-pet-purple text-white px-4 py-2 rounded-full text-sm">
