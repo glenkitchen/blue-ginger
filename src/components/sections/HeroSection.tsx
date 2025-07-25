@@ -11,7 +11,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-pet-purple via-purple-600 to-pet-teal text-white py-20">
+    <section className="bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground py-20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -26,13 +26,13 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={scrollToContact}
-                className="bg-white text-pet-purple px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors text-center"
+                className="bg-primary-foreground text-primary px-8 py-3 rounded-full font-semibold hover:bg-muted transition-colors text-center"
               >
                 Book Now
               </button>
               <a
                 href="tel:072 576 0937"
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-pet-purple transition-colors text-center"
+                className="border-2 border-primary-foreground text-primary-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary-foreground hover:text-primary transition-colors text-center"
               >
                 072 576 0937
               </a>

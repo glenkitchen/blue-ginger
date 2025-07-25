@@ -15,29 +15,27 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
+    <header className="bg-background shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-2">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-pet-purple to-pet-teal rounded-full flex items-center justify-center">
-              <i className="fas fa-paw text-white text-xl"></i>
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+              <i className="fas fa-paw text-primary-foreground text-sm"></i>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-pet-purple">
-                Blue Ginger
-              </h1>
-              <p className="text-sm text-gray-600">Pet Sitting</p>
+              <h1 className="text-lg font-bold text-primary">Blue Ginger</h1>
+              <p className="text-xs text-muted-foreground">Pet Sitting</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-4">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-pet-purple transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors text-sm"
               >
                 {item.label}
               </button>
@@ -46,20 +44,20 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-1"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <i
               className={`fas ${
                 isMobileMenuOpen ? "fa-times" : "fa-bars"
-              } text-gray-700`}
+              } text-muted-foreground`}
             ></i>
           </button>
 
           {/* Call Now Button */}
           <a
             href="tel:072 576 0937"
-            className="hidden md:block bg-pet-teal text-white px-6 py-2 rounded-full hover:bg-pet-green transition-colors"
+            className="hidden md:block bg-secondary text-secondary-foreground px-4 py-1 rounded-full hover:bg-accent transition-colors text-sm"
           >
             Call Now
           </a>
@@ -67,20 +65,20 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-3 pt-4">
+          <div className="md:hidden mt-2 pb-2 border-t border-border">
+            <div className="flex flex-col space-y-2 pt-2">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-pet-purple transition-colors text-left"
+                  className="text-muted-foreground hover:text-primary transition-colors text-left text-sm"
                 >
                   {item.label}
                 </button>
               ))}
               <a
                 href="tel:072 576 0937"
-                className="bg-pet-teal text-white px-6 py-2 rounded-full hover:bg-pet-green transition-colors text-center mt-4"
+                className="bg-secondary text-secondary-foreground px-4 py-1 rounded-full hover:bg-accent transition-colors text-center mt-2 text-sm"
               >
                 Call Now
               </a>

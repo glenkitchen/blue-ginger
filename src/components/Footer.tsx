@@ -2,21 +2,25 @@ import { services } from "@/data/services";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-12">
+    <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-pet-purple to-pet-teal rounded-full flex items-center justify-center">
-                <i className="fas fa-paw text-white"></i>
+              <div className="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
+                <i className="fas fa-paw text-primary"></i>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Blue Ginger</h3>
-                <p className="text-sm text-gray-400">Pet Sitting</p>
+                <h3 className="text-xl font-bold text-primary-foreground">
+                  Blue Ginger
+                </h3>
+                <p className="text-sm text-primary-foreground/80">
+                  Pet Sitting
+                </p>
               </div>
             </div>
-            <p className="text-gray-400">
+            <p className="text-primary-foreground/80">
               Professional pet care with love and dedication in Ballito and
               surrounding areas.
             </p>
@@ -24,8 +28,10 @@ export default function Footer() {
 
           {/* Services Section */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="text-lg font-semibold mb-4 text-primary-foreground">
+              Services
+            </h4>
+            <ul className="space-y-2 text-primary-foreground/80">
               {services.map((service) => (
                 <li key={service.id}>{service.title}</li>
               ))}
@@ -34,8 +40,10 @@ export default function Footer() {
 
           {/* Contact Section */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="text-lg font-semibold mb-4 text-primary-foreground">
+              Contact
+            </h4>
+            <ul className="space-y-2 text-primary-foreground/80">
               <li>072 576 0937</li>
               <li>bluegingerpetsitting@gmail.com</li>
               <li>Ballito, KZN</li>
@@ -44,35 +52,37 @@ export default function Footer() {
 
           {/* Social Media Section */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+            <h4 className="text-lg font-semibold mb-4 text-primary-foreground">
+              Follow Us
+            </h4>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-pet-purple rounded-full flex items-center justify-center hover:bg-pet-teal transition-colors"
+                className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors"
                 aria-label="Facebook"
               >
-                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-facebook-f text-primary"></i>
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-pet-purple rounded-full flex items-center justify-center hover:bg-pet-teal transition-colors"
+                className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors"
                 aria-label="Instagram"
               >
-                <i className="fab fa-instagram"></i>
+                <i className="fab fa-instagram text-primary"></i>
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-pet-purple rounded-full flex items-center justify-center hover:bg-pet-teal transition-colors"
+                className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors"
                 aria-label="WhatsApp"
               >
-                <i className="fab fa-whatsapp"></i>
+                <i className="fab fa-whatsapp text-primary"></i>
               </a>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/80">
           <p>
             &copy; 2025 Blue Ginger Petsitting. All rights reserved. |
             Professional pet care you can trust.
