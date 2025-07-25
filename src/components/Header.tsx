@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { navItems } from '@/data/navigation';
+import { useState } from "react";
+import { navItems } from "@/data/navigation";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,7 +9,7 @@ export default function Header() {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     setIsMobileMenuOpen(false);
   };
@@ -24,7 +24,9 @@ export default function Header() {
               <i className="fas fa-paw text-white text-xl"></i>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-pet-purple">Blue Ginger</h1>
+              <h1 className="text-2xl font-bold text-pet-purple">
+                Blue Ginger
+              </h1>
               <p className="text-sm text-gray-600">Pet Sitting</p>
             </div>
           </div>
@@ -47,7 +49,11 @@ export default function Header() {
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-gray-700`}></i>
+            <i
+              className={`fas ${
+                isMobileMenuOpen ? "fa-times" : "fa-bars"
+              } text-gray-700`}
+            ></i>
           </button>
 
           {/* Call Now Button */}

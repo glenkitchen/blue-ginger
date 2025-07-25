@@ -1,4 +1,4 @@
-import { services } from '@/data/services';
+import { services } from "@/data/services";
 
 export default function Footer() {
   return (
@@ -17,7 +17,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400">
-              Professional pet care with love and dedication in Ballito and surrounding areas.
+              Professional pet care with love and dedication in Ballito and
+              surrounding areas.
             </p>
           </div>
 
@@ -72,7 +73,10 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Blue Ginger Petsitting. All rights reserved. | Professional pet care you can trust.</p>
+          <p>
+            &copy; 2025 Blue Ginger Petsitting. All rights reserved. |
+            Professional pet care you can trust.
+          </p>
         </div>
       </div>
     </footer>

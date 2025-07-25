@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function HeroSection() {
   const scrollToContact = () => {
-    const element = document.querySelector('#contact');
+    const element = document.querySelector("#contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -19,8 +19,9 @@ export default function HeroSection() {
               Where we look after your pets as if they are our own
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Professional pet sitting in Ballito with dedication, love and so much care. 
-              Your pet is looked after in their own home with personalized attention.
+              Professional pet sitting in Ballito with dedication, love and so
+              much care. Your pet is looked after in their own home with
+              personalized attention.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -38,36 +39,14 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              <Image
-                src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Happy cat"
-                width={400}
-                height={300}
-                className="rounded-lg shadow-lg"
-              />
-              <Image
-                src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Happy dog"
-                width={400}
-                height={300}
-                className="rounded-lg shadow-lg mt-8"
-              />
-              <Image
-                src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Dog walking"
-                width={400}
-                height={300}
-                className="rounded-lg shadow-lg -mt-8"
-              />
-              <Image
-                src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Pet care"
-                width={400}
-                height={300}
-                className="rounded-lg shadow-lg"
-              />
-            </div>
+            <Image
+              src="/Infographic.PNG"
+              alt="Blue Ginger Pet Sitting Infographic"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-lg w-full h-auto"
+              priority
+            />
           </div>
         </div>
       </div>
