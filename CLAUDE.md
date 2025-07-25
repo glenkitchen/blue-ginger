@@ -2,6 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Planning
+
+- Use plan mode to make plans
+- Update tasks in the planning document as you complete tasks.
+- Abstract components where you can. Create them in the components folder. These components should accept data propertes and not contain hardcoded data.
+
 ## Project Overview
 
 This is a Next.js project for converting a static HTML pet sitting business website (`assets/UI.html`) into a modern React/Next.js application. The project is for Blue Ginger Petsitting, a professional pet care service in Ballito, KZN.
