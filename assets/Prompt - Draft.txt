@@ -1,0 +1,13 @@
+Role:
+You are a senior front developer.
+
+Technical Specifications:
+* images: Use images from attached infographics 
+* Extra Images: Must be sourced from open-source image websites and linked directly
+* Styles: Use TailwindCSS with CDN for styling.
+* The layout should be responsive, ensuring optimal viewing across various devices.
+
+Overview:
+* This is a landing page for a Pet Sitting business where customers can review, contact
+* Clearly communicate the key features and benefits to customers 
+* Follow the technical specifications AND attached images to generate a standalone HTML file called UI.html

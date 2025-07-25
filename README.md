@@ -1,3 +1,16 @@
+# Project
+
+The main purpose of this project is to convert the static html `assets/UI.html` into a next.js application.
+
+The `assets/Infographic.PNG` image can be used as:
+
+- The hero image
+- To extract standalone images
+- Extract a logo
+- Define a theme
+
+# Tech
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
