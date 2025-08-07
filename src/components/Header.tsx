@@ -42,12 +42,12 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors text-xl"
+                className="text-muted-foreground hover:text-primary transition-colors text-xl hover:cursor-pointer"
               >
                 {item.label}
               </button>
@@ -66,11 +66,11 @@ export default function Header() {
             ></i>
           </button>
 
-          <div className="flex items-center space-x-2">
+          <div className="hidden md:flex items-center space-x-2">
             {/* Call Now Button */}
             <a
               href="tel:072 576 0937"
-              className="text-xl hidden md:block bg-secondary text-secondary-foreground px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center space-x-2"
+              className="text-xl bg-secondary text-secondary-foreground px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center space-x-2"
             >
               <i className="fas fa-phone text-sm"></i>
               <span>Call Now</span>
@@ -81,7 +81,7 @@ export default function Header() {
               href="https://wa.me/27725760937"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hidden md:block bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors flex items-center space-x-2 ml-2"
+              className="text-xl bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-500 transition-colors flex items-center space-x-2 ml-2"
             >
               <i className="fab fa-whatsapp text-sm"></i>
               <span>WhatsApp</span>

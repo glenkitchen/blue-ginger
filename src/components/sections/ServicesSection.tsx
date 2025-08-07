@@ -1,3 +1,4 @@
+import { AuroraText } from "@/components/magicui/aurora-text";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { services } from "@/data/services";
 
@@ -7,7 +8,7 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Our Services
+            <AuroraText>Professional Pet Sitting</AuroraText>
           </h2>
           <p className="text-xl text-muted-foreground">
             Comprehensive pet care tailored to your furry friend&apos;s needs

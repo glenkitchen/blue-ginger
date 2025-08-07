@@ -67,7 +67,7 @@ export default function ContactSection() {
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <a
                   href="tel:072 576 0937"
-                  className="inline-block bg-primary-foreground text-primary px-6 py-2 rounded-full font-semibold hover:bg-muted transition-colors text-center"
+                  className="inline-block bg-secondary text-secondary-foreground  px-6 py-2 rounded-full font-semibold hover:bg-accent transition-colors text-center"
                 >
                   <i className="fas fa-phone mr-2"></i>
                   Call Now
@@ -76,7 +76,7 @@ export default function ContactSection() {
                   href="https://wa.me/27725760937"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors text-center"
+                  className="inline-block bg-green-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-600 transition-colors text-center"
                 >
                   <i className="fab fa-whatsapp mr-2"></i>
                   WhatsApp
