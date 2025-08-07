@@ -110,7 +110,7 @@ export default function HeroSection() {
       ))}
 
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-5xl font-bold mb-6 leading-tight">
               Where we look after your pets as if they are our own
@@ -137,7 +137,7 @@ export default function HeroSection() {
           </div>
           <div className="relative">
             {/* Carousel Container */}
-            <div className="relative overflow-hidden rounded-lg shadow-lg max-h-[500px]">
+            <div className="relative h-[600px] w-[600px] shadow-lg rounded-xl">
               {/* Current Image */}
               <div className="relative h-full">
                 <Image
@@ -147,7 +147,9 @@ export default function HeroSection() {
                   }`}
                   width={600}
                   height={400}
-                  className="w-full h-full object-cover transition-opacity duration-1000"
+                  className={
+                    "w-full h-full transition-opacity duration-1000 rounded-xl object-cover"
+                  }
                   priority={currentImageIndex === 0}
                 />
               </div>
