@@ -5,6 +5,7 @@ export interface Service {
   price: string;
   icon: string;
   gradient: string;
+  image: string;
 }
 
 export interface Review {

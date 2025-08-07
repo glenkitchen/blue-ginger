@@ -9,6 +9,7 @@ export const services: Service[] = [
     price: "R300/day + travel costs",
     icon: "🏠",
     gradient: "from-primary to-primary",
+    image: "/image-1.jpg",
   },
   {
     id: "check-in",
@@ -17,6 +18,7 @@ export const services: Service[] = [
     price: "R200 + travel costs",
     icon: "✅",
     gradient: "from-secondary to-secondary",
+    image: "/image-2.jpg",
   },
   {
     id: "hourly",
@@ -25,6 +27,7 @@ export const services: Service[] = [
     price: "R200 + travel costs",
     icon: "⏰",
     gradient: "from-accent to-accent",
+    image: "/image-3.jpg",
   },
   {
     id: "dog-walks",
@@ -33,5 +36,6 @@ export const services: Service[] = [
     price: "Contact for pricing",
     icon: "🚶",
     gradient: "from-primary to-secondary",
+    image: "/image-4.jpg",
   },
 ];
