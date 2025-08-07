@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface PawIcon {
   id: number;
@@ -15,6 +15,17 @@ interface PawIcon {
 export default function HeroSection() {
   const [pawIcons, setPawIcons] = useState<PawIcon[]>([]);
   const [nextId, setNextId] = useState(1);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const carouselImages = [
+    "/Infographic.PNG",
+    "/image-1.jpg",
+    "/image-2.jpg",
+    "/image-3.jpg",
+    "/image-4.jpg",
+    "/image-5.jpg",
+    "/image-6.jpg",
+  ];
 
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
@@ -66,6 +77,17 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, [nextId]);
 
+  // Carousel auto-advance effect
+  useEffect(() => {
+    const carouselInterval = setInterval(() => {
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % carouselImages.length
+      );
+    }, 8000); // Change image every 8 seconds (twice as slow)
+
+    return () => clearInterval(carouselInterval);
+  }, [carouselImages.length]);
+
   return (
     <section className="bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground py-20 relative overflow-hidden">
       {/* Animated paw icons */}
@@ -114,14 +136,62 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="relative">
-            <Image
-              src="/Infographic.PNG"
-              alt="Blue Ginger Pet Sitting Infographic"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-lg w-full h-auto"
-              priority
-            />
+            {/* Carousel Container */}
+            <div className="relative overflow-hidden rounded-lg shadow-lg max-h-[500px]">
+              {/* Current Image */}
+              <div className="relative h-full">
+                <Image
+                  src={carouselImages[currentImageIndex]}
+                  alt={`Blue Ginger Pet Sitting - Image ${
+                    currentImageIndex + 1
+                  }`}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover transition-opacity duration-1000"
+                  priority={currentImageIndex === 0}
+                />
+              </div>
+
+              {/* Carousel Navigation Dots */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentImageIndex
+                        ? "bg-primary-foreground"
+                        : "bg-primary-foreground/50 hover:bg-primary-foreground/75"
+                    }`}
+                    aria-label={`Go to image ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Previous/Next Buttons */}
+              <button
+                onClick={() =>
+                  setCurrentImageIndex((prev) =>
+                    prev === 0 ? carouselImages.length - 1 : prev - 1
+                  )
+                }
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-colors"
+                aria-label="Previous image"
+              >
+                <i className="fas fa-chevron-left"></i>
+              </button>
+              <button
+                onClick={() =>
+                  setCurrentImageIndex(
+                    (prev) => (prev + 1) % carouselImages.length
+                  )
+                }
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-colors"
+                aria-label="Next image"
+              >
+                <i className="fas fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
