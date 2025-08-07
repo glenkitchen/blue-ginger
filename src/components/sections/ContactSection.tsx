@@ -1,5 +1,3 @@
-import ContactForm from "@/components/ui/ContactForm";
-
 export default function ContactSection() {
   return (
     <section id="contact" className="py-20 bg-background">
@@ -13,7 +11,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="max-w-2xl mx-auto">
           <div>
             <h3 className="text-2xl font-semibold text-foreground mb-6">
               Contact Information
@@ -29,8 +27,17 @@ export default function ContactSection() {
                 </div>
               </div>
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
-                  <i className="fas fa-envelope text-secondary-foreground"></i>
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                  <i className="fab fa-whatsapp text-white"></i>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">WhatsApp</p>
+                  <p className="text-muted-foreground">072 576 0937</p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                  <i className="fas fa-envelope text-accent-foreground"></i>
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Email</p>
@@ -57,17 +64,25 @@ export default function ContactSection() {
               <p className="opacity-90">
                 Available 24/7 for urgent pet care needs
               </p>
-              <a
-                href="tel:072 576 0937"
-                className="inline-block mt-4 bg-primary-foreground text-primary px-6 py-2 rounded-full font-semibold hover:bg-muted transition-colors"
-              >
-                Call Now
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                <a
+                  href="tel:072 576 0937"
+                  className="inline-block bg-primary-foreground text-primary px-6 py-2 rounded-full font-semibold hover:bg-muted transition-colors text-center"
+                >
+                  <i className="fas fa-phone mr-2"></i>
+                  Call Now
+                </a>
+                <a
+                  href="https://wa.me/27725760937"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors text-center"
+                >
+                  <i className="fab fa-whatsapp mr-2"></i>
+                  WhatsApp
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div>
-            <ContactForm />
           </div>
         </div>
       </div>

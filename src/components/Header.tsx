@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { navItems } from "@/data/navigation";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,13 +21,24 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+            <Image
+              src="/logo.png"
+              alt="Blue Ginger Pet Sitting Logo"
+              width={75}
+              height={75}
+            />
+            {/* Original logo - commented out */}
+            {/* <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
               <i className="fas fa-paw text-primary-foreground text-sm"></i>
-            </div>
+            </div> */}
             <div>
-              <h1 className="text-lg font-bold text-primary">Blue Ginger</h1>
-              <p className="text-xs text-muted-foreground">Pet Sitting</p>
-            </div>
+              <h1 className="text-lg font-bold text-primary uppercase">
+                Blue Ginger
+              </h1>
+              <p className="text-xs text-muted-foreground uppercase">
+                Pet Sitting
+              </p>
+            </div>{" "}
           </div>
 
           {/* Desktop Navigation */}
@@ -35,7 +47,7 @@ export default function Header() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                className="text-muted-foreground hover:text-primary transition-colors text-xl"
               >
                 {item.label}
               </button>
@@ -54,13 +66,27 @@ export default function Header() {
             ></i>
           </button>
 
-          {/* Call Now Button */}
-          <a
-            href="tel:072 576 0937"
-            className="hidden md:block bg-secondary text-secondary-foreground px-4 py-1 rounded-full hover:bg-accent transition-colors text-sm"
-          >
-            Call Now
-          </a>
+          <div className="flex items-center space-x-2">
+            {/* Call Now Button */}
+            <a
+              href="tel:072 576 0937"
+              className="text-xl hidden md:block bg-secondary text-secondary-foreground px-4 py-2 rounded-full hover:bg-accent transition-colors flex items-center space-x-2"
+            >
+              <i className="fas fa-phone text-sm"></i>
+              <span>Call Now</span>
+            </a>
+
+            {/* WhatsApp Button */}
+            <a
+              href="https://wa.me/27725760937"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl hidden md:block bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors flex items-center space-x-2 ml-2"
+            >
+              <i className="fab fa-whatsapp text-sm"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </nav>
 
         {/* Mobile Menu */}
@@ -78,9 +104,19 @@ export default function Header() {
               ))}
               <a
                 href="tel:072 576 0937"
-                className="bg-secondary text-secondary-foreground px-4 py-1 rounded-full hover:bg-accent transition-colors text-center mt-2 text-sm"
+                className="bg-secondary text-secondary-foreground px-4 py-2 rounded-full hover:bg-accent transition-colors text-center mt-2 text-sm flex items-center justify-center space-x-2"
               >
-                Call Now
+                <i className="fas fa-phone text-sm"></i>
+                <span>Call Now</span>
+              </a>
+              <a
+                href="https://wa.me/27725760937"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors text-center mt-2 text-sm flex items-center justify-center space-x-2"
+              >
+                <i className="fab fa-whatsapp text-sm"></i>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>

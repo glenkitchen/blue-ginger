@@ -1,4 +1,5 @@
 import { services } from "@/data/services";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
+            {/* <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
                 <i className="fas fa-paw text-primary"></i>
               </div>
@@ -19,7 +20,25 @@ export default function Footer() {
                   Pet Sitting
                 </p>
               </div>
+            </div> */}
+            <div className="flex items-center space-x-3 mb-4">
+              <Image
+                src="/logo.png"
+                alt="Blue Ginger Pet Sitting Logo"
+                width={150}
+                height={150}
+                className="rounded-full"
+              />
+              <div>
+                <h3 className="text-xl font-bold text-primary-foreground">
+                  Blue Ginger
+                </h3>
+                <p className="text-sm text-primary-foreground/80">
+                  Pet Sitting
+                </p>
+              </div>
             </div>
+
             <p className="text-primary-foreground/80">
               Professional pet care with love and dedication in Ballito and
               surrounding areas.
