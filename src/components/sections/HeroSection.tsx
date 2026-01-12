@@ -110,9 +110,9 @@ export default function HeroSection() {
       ))}
 
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
-            <h2 className="text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Where we look after your pets as if they are our own
             </h2>
             <p className="text-xl mb-8 opacity-90">
@@ -135,9 +135,9 @@ export default function HeroSection() {
               </a>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative w-full">
             {/* Carousel Container */}
-            <div className="relative h-[600px] w-[600px] shadow-lg rounded-xl">
+            <div className="relative aspect-square w-full max-w-[600px] mx-auto shadow-lg rounded-xl">
               {/* Current Image */}
               <div className="relative h-full">
                 <Image
@@ -145,10 +145,10 @@ export default function HeroSection() {
                   alt={`Blue Ginger Pet Sitting - Image ${
                     currentImageIndex + 1
                   }`}
-                  width={600}
-                  height={400}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 600px"
                   className={
-                    "w-full h-full transition-opacity duration-1000 rounded-xl object-cover"
+                    "transition-opacity duration-1000 rounded-xl object-cover"
                   }
                   priority={currentImageIndex === 0}
                 />
